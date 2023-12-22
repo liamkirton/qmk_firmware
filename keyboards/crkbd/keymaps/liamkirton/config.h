@@ -22,14 +22,13 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 #define MASTER_LEFT
 
-// Left Hand Board (due to dead pin on controller)
+// Left Hand Board (due to dead pin on controller!)
 // #undef SOFT_SERIAL_PIN
 // #define SOFT_SERIAL_PIN D5
 
-// #define MASTER_RIGHT
-
 //#define QUICK_TAP_TERM 0
 //#define TAPPING_TERM 100
+#define TAPPING_TOGGLE 2
 
 #ifdef RGB_MATRIX_ENABLE
 #   define RGB_MATRIX_KEYPRESSES // reacts to keypresses
