@@ -18,8 +18,8 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 #include QMK_KEYBOARD_H
 
-#define DSK_L LCTL(LGUI(KC_LEFT))
-#define DKS_R LCTL(LGUI(KC_RIGHT))
+#define C_DSK_L LCTL(LGUI(KC_LEFT))
+#define C_DKS_R LCTL(LGUI(KC_RIGHT))
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     [0] = LAYOUT_split_3x6_3(
@@ -36,11 +36,11 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
     [1] = LAYOUT_split_3x6_3(
   //,-----------------------------------------------------.                    ,-----------------------------------------------------.
-      _______,   DSK_L,   KC_UP,   DKS_R, XXXXXXX, XXXXXXX,                         KC_7,    KC_8,    KC_9, XXXXXXX, XXXXXXX, XXXXXXX,
+      _______, C_DSK_L,   KC_UP, C_DKS_R, XXXXXXX, XXXXXXX,                         KC_7,    KC_8,    KC_9, XXXXXXX, XXXXXXX, XXXXXXX,
   //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
-      _______, KC_LEFT, KC_DOWN,KC_RIGHT, XXXXXXX, XXXXXXX,                         KC_4,    KC_5,    KC_6, XXXXXXX, XXXXXXX, XXXXXXX, 
+      _______, KC_LEFT, KC_DOWN,KC_RIGHT, XXXXXXX, XXXXXXX,                         KC_4,    KC_5,    KC_6, XXXXXXX, XXXXXXX, XXXXXXX,
   //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
-      _______, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,                         KC_1,    KC_2,    KC_3, KC_NUHS, KC_NUBS, _______, 
+      _______, KC_LCTL, KC_LGUI, KC_LALT, XXXXXXX, XXXXXXX,                         KC_1,    KC_2,    KC_3, XXXXXXX ,XXXXXXX, _______,
   //|--------+--------+--------+--------+--------+--------+--------|  |--------+--------+--------+--------+--------+--------+--------|
                                           _______, _______, _______,       KC_0, _______, _______
                                       //`--------------------------'  `--------------------------'
@@ -48,11 +48,11 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
     [2] = LAYOUT_split_3x6_3(
   //,-----------------------------------------------------.                    ,-----------------------------------------------------.
-       KC_GRV, KC_EXLM,   KC_AT, KC_HASH,  KC_DLR, KC_PERC,                      KC_CIRC, KC_AMPR, KC_ASTR, KC_MUTE, KC_VOLD, KC_VOLU,
+       KC_GRV, KC_EXLM,   KC_AT, KC_HASH,  KC_DLR, KC_PERC,                      KC_CIRC, KC_AMPR, KC_ASTR, KC_NUHS, LSFT(KC_NUHS), XXXXXXX,
   //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
-      _______, RGB_TOG, RGB_HUI, RGB_SAI, RGB_VAI, XXXXXXX,                      KC_MINS,  KC_EQL, KC_MPRV, KC_MSTP, KC_MPLY, KC_MNXT,
+      _______, KC_MUTE, KC_MPRV, KC_MSTP, KC_MPLY, KC_MNXT,                      KC_MINS, KC_PLUS,  KC_EQL, KC_UNDS, KC_NUBS, LSFT(KC_NUBS),
   //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
-      _______, RGB_MOD, RGB_HUD, RGB_SAD, RGB_VAD, XXXXXXX,                      KC_LPRN, KC_RPRN, KC_LBRC, KC_RBRC, XXXXXXX, _______,
+      _______, RGB_TOG, RGB_MOD, RGB_HUI, RGB_SAI, RGB_VAI,                      KC_LPRN, KC_RPRN, KC_LBRC, KC_RBRC, KC_LCBR, KC_RCBR,
   //|--------+--------+--------+--------+--------+--------+--------|  |--------+--------+--------+--------+--------+--------+--------|
                                           _______, _______, _______,    _______, _______, _______
                                       //`--------------------------'  `--------------------------'
