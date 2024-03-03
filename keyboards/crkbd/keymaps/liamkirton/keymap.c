@@ -48,7 +48,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
     [2] = LAYOUT_split_3x6_3(
   //,-----------------------------------------------------.                    ,-----------------------------------------------------.
-       KC_GRV, KC_EXLM,   KC_AT, KC_HASH,  KC_DLR, KC_PERC,                      KC_CIRC, KC_AMPR, KC_ASTR, KC_NUHS, LSFT(KC_NUHS), XXXXXXX,
+       KC_GRV, KC_EXLM,   KC_AT, KC_HASH,  KC_DLR, KC_PERC,                      KC_CIRC, KC_AMPR, KC_ASTR, KC_NUHS, LSFT(KC_NUHS), KC_F12,
   //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
       _______, KC_MUTE, KC_MPRV, KC_MSTP, KC_MPLY, KC_MNXT,                      KC_MINS, KC_PLUS,  KC_EQL, KC_UNDS, KC_NUBS, LSFT(KC_NUBS),
   //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
@@ -75,9 +75,8 @@ const key_override_t f6_key_override = ko_make_basic(MOD_MASK_CTRL, KC_PERC, KC_
 const key_override_t f7_key_override = ko_make_basic(MOD_MASK_CTRL, KC_CIRC, KC_F7);
 const key_override_t f8_key_override = ko_make_basic(MOD_MASK_CTRL, KC_AMPR, KC_F8);
 const key_override_t f9_key_override = ko_make_basic(MOD_MASK_CTRL, KC_ASTR, KC_F9);
-const key_override_t f10_key_override = ko_make_basic(MOD_MASK_CTRL, KC_KB_MUTE, KC_F10);
-const key_override_t f11_key_override = ko_make_basic(MOD_MASK_CTRL, KC_KB_VOLUME_DOWN, KC_F11);
-const key_override_t f12_key_override = ko_make_basic(MOD_MASK_CTRL, KC_KB_VOLUME_UP, KC_F12);
+const key_override_t f10_key_override = ko_make_basic(MOD_MASK_CTRL, KC_NUHS, KC_F10);
+const key_override_t f11_key_override = ko_make_basic(MOD_MASK_CTRL, LSFT(KC_NUHS), KC_F11);
 
 const key_override_t **key_overrides = (const key_override_t *[]){
     &delete_key_override,
@@ -98,7 +97,6 @@ const key_override_t **key_overrides = (const key_override_t *[]){
     &f9_key_override,
     &f10_key_override,
     &f11_key_override,
-    &f12_key_override,
 
     NULL
 };
