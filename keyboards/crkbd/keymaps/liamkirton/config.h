@@ -22,8 +22,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 #define MASTER_LEFT
 
-//#define QUICK_TAP_TERM 0
-//#define TAPPING_TERM 100
+#define ONESHOT_TAP_TOGGLE 2
 #define TAPPING_TOGGLE 2
 
 #ifdef RGB_MATRIX_ENABLE
