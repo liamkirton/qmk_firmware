@@ -73,42 +73,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
 const key_override_t delete_key_override = ko_make_basic(MOD_MASK_SHIFT, KC_BSPC, KC_DEL);
 
-const key_override_t pgup_key_override = ko_make_basic(MOD_MASK_ALT, KC_UP, KC_PGUP);
-const key_override_t pgdn_key_override = ko_make_basic(MOD_MASK_ALT, KC_DOWN, KC_PGDN);
-const key_override_t home_key_override = ko_make_basic(MOD_MASK_ALT, KC_LEFT, KC_HOME);
-const key_override_t end_key_override = ko_make_basic(MOD_MASK_ALT, KC_RIGHT, KC_END);
-
-const key_override_t f1_key_override = ko_make_basic(MOD_MASK_CTRL, KC_GRV, KC_F1);
-const key_override_t f2_key_override = ko_make_basic(MOD_MASK_CTRL, KC_EXLM, KC_F2);
-const key_override_t f3_key_override = ko_make_basic(MOD_MASK_CTRL, KC_AT, KC_F3);
-const key_override_t f4_key_override = ko_make_basic(MOD_MASK_CTRL, KC_HASH, KC_F4);
-const key_override_t f5_key_override = ko_make_basic(MOD_MASK_CTRL, KC_DLR, KC_F5);
-const key_override_t f6_key_override = ko_make_basic(MOD_MASK_CTRL, KC_PERC, KC_F6);
-const key_override_t f7_key_override = ko_make_basic(MOD_MASK_CTRL, KC_CIRC, KC_F7);
-const key_override_t f8_key_override = ko_make_basic(MOD_MASK_CTRL, KC_AMPR, KC_F8);
-const key_override_t f9_key_override = ko_make_basic(MOD_MASK_CTRL, KC_ASTR, KC_F9);
-const key_override_t f10_key_override = ko_make_basic(MOD_MASK_CTRL, KC_NUHS, KC_F10);
-const key_override_t f11_key_override = ko_make_basic(MOD_MASK_CTRL, LSFT(KC_NUHS), KC_F11);
-
 const key_override_t *key_overrides[] = {
     &delete_key_override,
-
-    &pgup_key_override,
-    &pgdn_key_override,
-    &home_key_override,
-    &end_key_override,
-
-    &f1_key_override,
-    &f2_key_override,
-    &f3_key_override,
-    &f4_key_override,
-    &f5_key_override,
-    &f6_key_override,
-    &f7_key_override,
-    &f8_key_override,
-    &f9_key_override,
-    &f10_key_override,
-    &f11_key_override,
-
     NULL
 };
